@@ -25,11 +25,11 @@ namespace ToDoWebAPI.Controllers
             try
             {
                 var user = _service.Agregar(usuario);
-                return Ok(JsonConvert.SerializeObject(new { succed = true, message = "Usuario registrado", data = user}));
+                return Ok(JsonConvert.SerializeObject(new { success = true, message = "Usuario registrado", data = user}));
             }
             catch (Exception ex)
             {
-                return BadRequest(JsonConvert.SerializeObject(new { succed = false, message = ex.Message, details = ex}));
+                return BadRequest(JsonConvert.SerializeObject(new { success = false, message = ex.Message, details = ex}));
             }
         }
     }

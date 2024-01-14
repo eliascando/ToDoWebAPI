@@ -38,7 +38,7 @@ namespace ToDoWebAPI.Controllers
             try
             {
                 _service.ActualizarEstadoNota(idNota, idEstado);
-                return Ok(JsonConvert.SerializeObject(new { message = "Estado actualizado" }));
+                return Ok(JsonConvert.SerializeObject(new { success = true ,message = "Estado actualizado" }));
             }
             catch (Exception ex)
             {
